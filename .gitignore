@@ -8,3 +8,7 @@
 /LearnInc.Common.Web/LearnInc.Common.Services/obj/Debug/netstandard2.0
 /LearnInc.Common.Web/LearnInc.Common.Services/obj
 /.vs/slnx.sqlite
+/LearnInc.Common.Web/LearnInc.Common.Web.UnitTests/bin/Debug/netcoreapp2.1
+/LearnInc.Common.Web/LearnInc.Common.Web.UnitTests/obj
+/LearnInc.Common.Web/Learning.Common.Services.UnitTests/bin/Debug/netcoreapp2.1
+/LearnInc.Common.Web/Learning.Common.Services.UnitTests/obj

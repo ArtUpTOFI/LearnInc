@@ -70,7 +70,7 @@ namespace LearnInc.Common.Web
 			});
 		}
 
-		private void RegisterTypes(IServiceCollection services)
+		public void RegisterTypes(IServiceCollection services)
 		{
 			services.AddScoped<ITestService, TestService>();
 
@@ -78,7 +78,7 @@ namespace LearnInc.Common.Web
 			//TypeRegistrar.RegisterTypes(IoC.GlobalContainer);
 		}
 
-		private void RegisterMappings()
+		public void RegisterMappings()
 		{
 			MapperConfigurationExpression mapperConfigurationExpression = new MapperConfigurationExpression();
 			new MappingRegistrar().RegisterMappings(mapperConfigurationExpression);
