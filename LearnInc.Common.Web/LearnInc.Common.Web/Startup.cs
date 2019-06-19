@@ -1,9 +1,12 @@
+using AutoMapper;
+using AutoMapper.Configuration;
+using LearnInc.Common.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
 
 namespace LearnInc.Common.Web
 {
@@ -26,6 +29,12 @@ namespace LearnInc.Common.Web
 			{
 				configuration.RootPath = "ClientApp/build";
 			});
+
+			// register types - for now use of build-in DI container - should we change to Unity??
+			RegisterTypes(services);
+
+			// to be moved forward later - initialization of mappings
+			RegisterMappings();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +68,23 @@ namespace LearnInc.Common.Web
 					spa.UseReactDevelopmentServer(npmScript: "start");
 				}
 			});
+		}
+
+		private void RegisterTypes(IServiceCollection services)
+		{
+			services.AddScoped<ITestService, TestService>();
+
+			//IoC.InitializeContainerAndLocator();
+			//TypeRegistrar.RegisterTypes(IoC.GlobalContainer);
+		}
+
+		private void RegisterMappings()
+		{
+			MapperConfigurationExpression mapperConfigurationExpression = new MapperConfigurationExpression();
+			new MappingRegistrar().RegisterMappings(mapperConfigurationExpression);
+
+			Mapper.Initialize(mapperConfigurationExpression);
+			Mapper.Configuration.CompileMappings();
 		}
 	}
 }
