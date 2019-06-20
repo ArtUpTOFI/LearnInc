@@ -11,7 +11,7 @@ class Test extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		// This method runs when incoming props (e.g., route params) change
-		this.props.requestTestRecords();
+		//this.props.requestTestRecords();
 	}
 
 	render() {
@@ -37,6 +37,7 @@ function renderTestRecords(props) {
 			<tbody>
 				{props.testRecords.map(record =>
 					<tr key={record.testId}>
+						<td>{record.testId}</td>
 						<td>{record.testText}</td>
 					</tr>
 				)}
