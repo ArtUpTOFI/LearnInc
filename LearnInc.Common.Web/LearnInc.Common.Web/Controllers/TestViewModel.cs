@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LearnInc.Common.Web.Controllers
+﻿namespace LearnInc.Common.Web.Controllers
 {
 	public class TestViewModel
 	{

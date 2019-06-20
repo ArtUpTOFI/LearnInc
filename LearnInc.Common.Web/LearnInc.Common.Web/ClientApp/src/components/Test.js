@@ -30,7 +30,7 @@ function renderTestRecords(props) {
 		<table className='table'>
 			<thead>
 				<tr>
-					<th>Guid</th>
+					<th>Id</th>
 					<th>Text</th>
 				</tr>
 			</thead>
