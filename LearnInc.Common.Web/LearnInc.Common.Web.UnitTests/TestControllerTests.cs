@@ -24,8 +24,8 @@ namespace LearnInc.Common.Web.UnitTests
 		public void TestsGetTestsReturnTestModels()
 		{
 			// Arrange
-			Guid testId1 = Guid.NewGuid();
-			Guid testId2 = Guid.NewGuid();
+			int testId1 = 1;
+			int testId2 = 2;
 
 			List<TestModel> models = new List<TestModel>
 			{

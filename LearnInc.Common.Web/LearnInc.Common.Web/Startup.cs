@@ -80,10 +80,12 @@ namespace LearnInc.Common.Web
 
 		public void RegisterMappings()
 		{
-			MapperConfigurationExpression mapperConfigurationExpression = new MapperConfigurationExpression();
-			new MappingRegistrar().RegisterMappings(mapperConfigurationExpression);
+			MapperConfigurationExpression mapperConfiguration = new MapperConfigurationExpression();
 
-			Mapper.Initialize(mapperConfigurationExpression);
+			new MappingRegistrar().RegisterMappings(mapperConfiguration);
+			new Services.MappingRegistrar().RegisterMappings(mapperConfiguration);
+
+			Mapper.Initialize(mapperConfiguration);
 			Mapper.Configuration.CompileMappings();
 		}
 	}

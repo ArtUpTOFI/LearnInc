@@ -9,7 +9,7 @@ namespace LearnInc.Common.Web.UnitTests
 		[TestMethod]
 		public void TestRegisterModelMappings()
 		{
-			// Arrange
+			//Arrange
 			MappingRegistrar registrar = new MappingRegistrar();
 
 			MapperConfiguration config = new MapperConfiguration(cfg =>

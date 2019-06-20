@@ -12,3 +12,5 @@
 /LearnInc.Common.Web/LearnInc.Common.Web.UnitTests/obj
 /LearnInc.Common.Web/Learning.Common.Services.UnitTests/bin/Debug/netcoreapp2.1
 /LearnInc.Common.Web/Learning.Common.Services.UnitTests/obj
+/LearnInc.Common.Web/LearnInc.Common.Repository/obj
+/LearnInc.Common.Web/LearnInc.Common.Repository/bin/Debug/netstandard2.0
