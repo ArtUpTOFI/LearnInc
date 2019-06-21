@@ -1,12 +1,12 @@
 ﻿using Unity;
 
-namespace LearnInc.Common.Repository
+namespace LearnInc.Common.Services
 {
 	public static class TypeRegistrar
 	{
 		public static void RegisterTypes(IUnityContainer container)
 		{
-			container.RegisterType<ITestStore, TestStore>();
+			container.RegisterType<ITestService, TestService>();
 		}
 	}
 }

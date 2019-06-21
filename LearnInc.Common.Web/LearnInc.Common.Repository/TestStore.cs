@@ -3,7 +3,7 @@ using MongoDB.Driver;
 
 namespace LearnInc.Common.Repository
 {
-	public class TestStore
+	public class TestStore: ITestStore
 	{
 		private IMongoDatabase _db;
 

@@ -30,9 +30,6 @@ namespace LearnInc.Common.Web
 				configuration.RootPath = "ClientApp/build";
 			});
 
-			// register types - for now use of build-in DI container - should we change to Unity??
-			RegisterTypes(services);
-
 			// to be moved forward later - initialization of mappings
 			RegisterMappings();
 		}
@@ -68,14 +65,6 @@ namespace LearnInc.Common.Web
 					spa.UseReactDevelopmentServer(npmScript: "start");
 				}
 			});
-		}
-
-		public void RegisterTypes(IServiceCollection services)
-		{
-			services.AddScoped<ITestService, TestService>();
-
-			//IoC.InitializeContainerAndLocator();
-			//TypeRegistrar.RegisterTypes(IoC.GlobalContainer);
 		}
 
 		public void RegisterMappings()

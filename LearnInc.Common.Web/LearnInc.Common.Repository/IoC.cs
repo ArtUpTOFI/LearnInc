@@ -1,6 +1,6 @@
 ﻿using Unity;
 
-namespace LearnInc.Common.Services
+namespace LearnInc.Common.Repository
 {
 	public static class IoC
 	{

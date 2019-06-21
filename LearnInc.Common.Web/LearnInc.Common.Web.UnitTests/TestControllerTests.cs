@@ -56,7 +56,7 @@ namespace LearnInc.Common.Web.UnitTests
 
 		private TestController CreateController()
 		{
-			return new TestController(this._testServiceMock.Object);
+			return new TestController();
 		}
 	}
 }
